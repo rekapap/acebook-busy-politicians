@@ -9,8 +9,6 @@ before_install:
 language: ruby
 rvm:
 - 2.5.0
-- jruby-19mode
-- rbx-2
 
 before_script:
   - bundle exec rake db:create db:migrate
