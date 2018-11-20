@@ -24,9 +24,9 @@ before_script:
 
 
 script:
-  - bundle exec rake testcode
+  bundle exec rake testcode
 
-  after_script:
+after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 cache: bundler
