@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
-  def new
+  def home
+    @x = "hello becca"
+  end
+
+  def new   # Felix: I think this is the same as new_post_path (localhost/posts/new)
     @post = Post.new
   end
 
@@ -10,11 +14,5 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-  end
-
-  private
-
-  def post_params
-    params.require(:post).permit(:message)
   end
 end
