@@ -1,7 +1,7 @@
 def sign_in_to_test()
-  RAILS_ENV=test
-  tester = User.new
-  tester.username = "tester"
-  tester.email = "test@test.com"
-  tester.password = ""
+  visit '/posts'
+  click_link 'Sign In'
+  fill_in "user[email]", with: "test@test.com"
+  fill_in "user[password]", with: "12345678"
+  click_button 'Log in'
 end
