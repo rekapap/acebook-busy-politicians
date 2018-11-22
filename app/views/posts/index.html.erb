@@ -13,6 +13,6 @@
   <p>
   <strong> <%= post.user.username %> </strong> @ <em> <%= post.updated_at %> </em>
   <br>
-  <%= post.message %>
+  <%= simple_format(post.message) %>
   </p>
 <% end %>
