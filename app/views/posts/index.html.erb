@@ -13,6 +13,12 @@
   <p>
   <strong> <%= post.user.username %> </strong> @ <em> <%= post.updated_at %> </em>
   <br>
+
   <%= simple_format(post.message) %>
+  <% if current_user && (current_user.id == post.user_id) %>
+    <%= link_to 'Delete post', post_path(post),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
+  <% end %>
   </p>
 <% end %>
