@@ -16,10 +16,12 @@
   <%= post.message.html_safe %>
   <%= post.likecount %> like(s)
 
-  <% if post.post_already_liked_by_current_user?(current_user) then %>
-    <%= link_to 'Unlike', like_path(post.id), method: :delete %>
-  <% else %>
-    <%= link_to 'Like', post_likes_path(post.id), method: :post %>
+  <% if user_signed_in? %>
+    <% if post.post_already_liked_by_current_user?(current_user) then %>
+      <%= link_to 'Unlike', like_path(post.id), method: :delete %>
+    <% else %>
+      <%= link_to 'Like', post_likes_path(post.id), method: :post %>
+    <% end %>
   <% end %>
 
   <% if current_user && (current_user.id == post.user_id) %>
