@@ -1,6 +1,5 @@
 require_relative '../models/post.rb'
 class UserController < ApplicationController
-
   def user
     if current_user == nil
       redirect_to '/'
