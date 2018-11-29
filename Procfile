@@ -3,6 +3,6 @@ build:
     - ruby
 run:
   rake: bundle exec rake
-  rails: rails db:create
-  rails: rails db:migrate
+  rake: db:create
+  rake: db:migrate
   web: bundle exec puma config.ru -p $PORT
