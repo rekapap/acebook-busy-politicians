@@ -24,7 +24,7 @@ end
 def sign_in_to_test(wrong_credentials = false)
   email = wrong_credentials ? "wrong@email.com" : "user@user.com"
   password = wrong_credentials ? "wrongpassword" : "pword123"
-  visit '/posts'
+  visit '/'
   click_link "Sign In"
   fill_in "user[email]", with: email
   fill_in "user[password]", with: password
