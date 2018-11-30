@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/view-post.css">
+    <% if content_for?(:head) %>
+      <%= yield(:head) %>
+    <% end %>
+
     <%= render 'shared/head' %>
   </head>
 
   <body>
+    <div class="body">
     <%= render 'shared/navbar_partial' %>
     <%= render 'shared/notices' %>
 
-    <div class="container">
+    <div id="test" class="container">
       <%= yield %>
     </div>
 
     <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

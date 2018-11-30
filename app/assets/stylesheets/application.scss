@@ -10,6 +10,33 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  */
+.body {
+  background-color: white;
+}
 
- 
+.container {
+  margin: 10px;
+}
+
+.post {
+  background-color: #80ffff;
+  margin: 15px;
+  padding: 10px;
+}
+
+.post:nth-child(odd) {
+  background-color: #70dbdb;
+}
+
+.post:hover {
+  background-color: #ccffff;
+  transition: 0.3s;
+}
+
+.comments {
+  background-color: #e6ffff;
+}
+
+
+
 @import "bootstrap"
