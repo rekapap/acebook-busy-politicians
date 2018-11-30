@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Acebook</title>
-    <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/view-post.css">
+    <% if content_for?(:head) %>
+      <%= yield(:head) %>
+    <% end %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= render 'shared/head' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="body">
+    <%= render 'shared/navbar_partial' %>
+    <%= render 'shared/notices' %>
+
+    <div id="test" class="container">
+      <%= yield %>
+    </div>
+
+    <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

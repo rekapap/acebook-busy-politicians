@@ -84,6 +84,7 @@ Layout/IndentationConsistency:
     - 'Gemfile'
     - 'app/controllers/likes_controller.rb'
 
+
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: Width, IgnoredPatterns.
@@ -309,6 +310,7 @@ Style/StringLiteralsInInterpolation:
 # SupportedStyles: percent, brackets
 Style/SymbolArray:
   EnforcedStyle: brackets
+
 
 # Offense count: 62
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.

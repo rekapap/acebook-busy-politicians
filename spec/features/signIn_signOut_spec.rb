@@ -16,7 +16,9 @@ describe "Sign In" do
 
     it "signs the user in with correct credentials" do
       visit '/'
-      expect(page).to have_content("Welcome username123")
+      save_and_open_page
+      expect(page).to have_content("username123")
+      expect(page).not_to have_content("Sign In")
     end
 
     it "redirects to users timeline after signing in" do
