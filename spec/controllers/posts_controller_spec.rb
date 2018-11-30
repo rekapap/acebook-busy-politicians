@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
-
   describe "GET /new " do
-
     let(:current_user) { double :current_user }
     it "responds with 200" do
       allow(current_user).to receive(:id).and_return(1)
@@ -37,6 +35,4 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to have_http_status(200)
     end
   end
-
-
 end

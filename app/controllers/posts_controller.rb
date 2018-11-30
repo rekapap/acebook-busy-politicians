@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params.merge({user_id: current_user.id, id: params[:id]}))
+    @post = Post.create(post_params.merge(user_id: current_user.id, id: params[:id]))
     redirect_to posts_url
   end
 
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(post_params.merge({user_id: current_user.id}))
+    @post.update(post_params.merge(user_id: current_user.id))
     redirect_to session.delete(:return_to)
   end
 

@@ -19,8 +19,9 @@ class LikesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_like
-      @like = Like.find_by(id: params[:like_id])
-    end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_like
+    @like = Like.find_by(id: params[:like_id])
+  end
 end
